@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8">
+<title>LOGMPA • Painel</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<h1>LOGMPA</h1>
+<p>Painel de leitura. Dados em <code>data/solicitacoes.json</code>.</p>
+<div id="cont"></div><div id="lista"></div>
+<script>
+(async()=>{
+  const r=await fetch('data/solicitacoes.json').catch(()=>({json:async()=>[]}));
+  const itens=await r.json();
+  const status=["Registrado","Programado","Em rota","Concluído"];
+  const cont=Object.fromEntries(status.map(s=>[s,0]));
+  itens.forEach(i=>cont[i.status]=(cont[i.status]||0)+1);
+  cont.html=Object.entries(cont).map(([k,v])=>`${k}: ${v}`).join(' | ');
+  document.querySelector('#cont').textContent=cont.html||"Sem dados ainda.";
+  document.querySelector('#lista').innerHTML = itens.map(i=>`
+    <div><b>${i.filial} • ${i.cliente}</b> — ${i.status} — Chassi: ${i.chassi||"-"}</div>
+  `).join('');
+})();
+</script>
