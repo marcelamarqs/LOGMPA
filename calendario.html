@@ -1,38 +1,46 @@
-
 <!doctype html>
 <html lang="pt-br">
   <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vitrine Logística (GitHub Pages)</title>
-<link rel="stylesheet" href="./styles.css"/>
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-</head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Calendário | Vitrine Logística</title>
+    <link rel="stylesheet" href="./styles.css"/>
+
+    <!-- libs necessárias (sem build) -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
   <body>
-    
-<nav class="nav">
-  <div class="container">
-    <a href="./index.html">Painel</a>
-    <a href="./calendario.html">Calendário</a>
-    <a href="./registradas.html">Solicitações Registradas</a>
-    <a href="./concluidas.html">Transportes Concluídos</a>
-    <a href="./demo.html">Demonstrações</a>
-  </div>
-</nav>
+    <nav class="nav">
+      <div class="container">
+        <a href="./index.html">Painel</a>
+        <a href="./calendario.html" class="active">Calendário</a>
+        <a href="./registradas.html">Solicitações Registradas</a>
+        <a href="./concluidas.html">Transportes Concluídos</a>
+        <a href="./demo.html">Demonstrações</a>
+      </div>
+    </nav>
 
     <div class="container">
       <h1>Calendário</h1>
-      <p class="lead">Semanal: Seg a Sáb. Mensal: O Chassi entra quando o Status é marcado como concluído.</p>
+      <p class="lead">Semanal: seg a sáb com CHASSI (G) e CLIENTE (NOTA J). Mensal: só CHASSI das com status CONCLUIDO.</p>
+
       <div id="tabs-cal" class="tabs">
         <button class="tab active" onclick="App.showSemanal()">Semanal</button>
         <button class="tab" onclick="App.showMensal()">Mensal</button>
       </div>
+
       <div id="calendar" class="grid grid-2"></div>
     </div>
+
     <script src="./app.js"></script>
-    <script>App.gate();App.renderCalendario();</script>
+    <script>
+      // trava simples
+      App.gate();
+      // carrega por padrão a visão semanal
+      App.renderCalendario();
+    </script>
   </body>
 </html>
