@@ -2,7 +2,6 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Vitrine Logística (GitHub Pages)</title>
@@ -10,31 +9,28 @@
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
-
-  </head>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
   <body>
     
 <nav class="nav">
   <div class="container">
     <a href="./index.html">Painel</a>
     <a href="./calendario.html">Calendário</a>
-    <a href="./maquinas.html">Máquinas</a>
-    <a href="./concluidas.html">Concluídas</a>
+    <a href="./registradas.html">Solicitações Registradas</a>
+    <a href="./concluidas.html">Transportes Concluídos</a>
+    <a href="./demo.html">Demonstrações</a>
   </div>
 </nav>
 
     <div class="container">
-      <h1>Solicitações Concluídas</h1>
-      <p class="lead">Histórico filtrável.</p>
-      <div class="search"><input id="q" type="search" placeholder="Buscar..." /></div>
+      <h1>Transportes Concluídos</h1>
+      <p class="lead">Somente status CONCLUIDO, ignorando (D). Ordenado do mais novo para o mais antigo.</p>
       <div class="card" style="margin-top:16px">
         <table class="table" id="conc-table"></table>
       </div>
     </div>
     <script src="./app.js"></script>
-    <script>
-      document.getElementById('q').addEventListener('input', e => App.renderConcluidas(e.target.value));
-      App.renderConcluidas('');
-    </script>
+    <script>App.gate();App.renderConcluidas();</script>
   </body>
 </html>
