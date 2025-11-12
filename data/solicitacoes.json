@@ -1,0 +1,13 @@
+[
+  {
+    "tipo": "Máquina",
+    "status": "Registrado",
+    "filial": "Ponta Grossa",
+    "cliente": "Oswaldo R Barbosa",
+    "chassi": "1BM6100JESD602123",
+    "origem": "MACPONTA AGRO DE PRUDENTÓPOLIS",
+    "destino": "https://maps.app.goo.gl/Nh38oEZFBD2w9i436",
+    "prazo": "2025-11-14",
+    "responsavel": "Giovana"
+  }
+]
