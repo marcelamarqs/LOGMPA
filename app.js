@@ -348,7 +348,7 @@ const App = (() => {
     table.innerHTML = `
       <thead>
         <tr>
-          <th>PREVISÃO (H)</th><th>SOLICITANTE (K)</th><th>CLIENTE (J)</th><th>CHASSI (G)</th><th>ESTÁ EM (L)</th><th>VAI PARA (M)</th><th>TRANSPORTE (B)</th><th>STATUS (A)</th><th>LINK (O/P)</th>
+          <th>PREVISÃO</th><th>SOLICITANTE</th><th>CLIENTE/NOTA</th><th>CHASSI</th><th>ESTÁ EM</th><th>VAI PARA</th><th>TRANSPORTADO POR</th><th>STATUS</th><th>LOC/th>
         </tr>
       </thead>
       <tbody>${rows || `<tr><td colspan="9" class="muted">Nenhuma solicitação encontrada.</td></tr>`}</tbody>
@@ -405,7 +405,7 @@ const App = (() => {
     table.innerHTML = `
       <thead>
         <tr>
-          <th>PREVISÃO (H)</th><th>SOLICITANTE (K)</th><th>CLIENTE (J)</th><th>CHASSI (G)</th><th>ESTÁ EM (L)</th><th>VAI PARA (M)</th><th>TRANSPORTE (B)</th><th>STATUS (A)</th><th>LINK (O/P)</th>
+          <th>PREVISÃO</th><th>SOLICITANTE</th><th>CLIENTE/NOTA</th><th>CHASSI</th><th>ESTÁ EM</th><th>VAI PARA</th><th>TRANSPORTADO POR</th><th>STATUS</th><th>LOC/th>
         </tr>
       </thead>
       <tbody>${rows || `<tr><td colspan="9" class="muted">Nada concluído encontrado.</td></tr>`}</tbody>
@@ -460,7 +460,7 @@ const App = (() => {
     table.innerHTML = `
       <thead>
         <tr>
-          <th>PREVISÃO (H)</th><th>SOLICITANTE (K)</th><th>CLIENTE (J)</th><th>CHASSI (G)</th><th>ESTÁ EM (L)</th><th>VAI PARA (M)</th><th>TRANSPORTE (B)</th><th>STATUS (A)</th><th>LINK (O/P)</th>
+          <th>PREVISÃO</th><th>SOLICITANTE</th><th>CLIENTE/NOTA</th><th>CHASSI</th><th>ESTÁ EM</th><th>VAI PARA</th><th>TRANSPORTADO POR</th><th>STATUS</th><th>LOC/th>
         </tr>
       </thead>
       <tbody>${rows || `<tr><td colspan="9" class="muted">Nenhuma demonstração.</td></tr>`}</tbody>
