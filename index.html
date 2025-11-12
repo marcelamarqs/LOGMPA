@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vitrine Logística (GitHub Pages)</title>
+<link rel="stylesheet" href="./styles.css"/>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+
+  </head>
+  <body>
+    
+<nav class="nav">
+  <div class="container">
+    <a href="./index.html">Painel</a>
+    <a href="./calendario.html">Calendário</a>
+    <a href="./maquinas.html">Máquinas</a>
+    <a href="./concluidas.html">Concluídas</a>
+  </div>
+</nav>
+
+    <div class="container">
+      <h1>Painel de Controle</h1>
+      <p class="lead">Visão geral das solicitações logísticas usando um CSV hospedado no próprio GitHub.</p>
+      <div id="stats" class="grid grid-4"></div>
+      <div class="card" style="margin-top:16px">
+        <h3 style="margin:0 0 12px">Kanban por Status</h3>
+        <div id="kanban" class="kanban"></div>
+      </div>
+    </div>
+    <div class="footer">Site estático. Atualize o arquivo <code>data/solicitacoes.csv</code> no GitHub para refletir novos dados.</div>
+    <script src="./app.js"></script>
+    <script>App.renderPainel();</script>
+  </body>
+</html>
